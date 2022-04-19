@@ -1,6 +1,4 @@
 #pragma once
-#include <iostream>
-#include <type_traits>
 #include <variant>
 
 namespace sm {
@@ -153,9 +151,6 @@ namespace sm {
                                },
                        },
                        mState);
-        }
-        static void foo() {
-            std::cout << __LINE__ << " StateMachine Foo\n";
         }
 
         StatePack mState;

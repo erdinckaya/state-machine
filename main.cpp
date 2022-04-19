@@ -14,7 +14,6 @@ struct name final {    \
         template<typename StateMachine> \
         static bool check(const StateMachine &s, const VideoDecodeEvent &) { \
             std::cout << __LINE__ << " InternalStartCond VideoDecodeEvent\n"; \
-            s.foo(); \
             return false; \
         } \
     \
