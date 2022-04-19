@@ -129,14 +129,14 @@ template <typename StatePack> struct StateMachine {
 
     std::visit(
         overloaded{
-            [](auto s) { s.exit(); },
+            [](auto &s) { s.exit(); },
         },
         mState);
 
     mState = state;
     std::visit(
         overloaded{
-            [](auto s) { s.enter(); },
+            [](auto &s) { s.enter(); },
         },
         mState);
   }
